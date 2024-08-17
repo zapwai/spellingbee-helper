@@ -1,7 +1,7 @@
 # spellingbee-helper
 Spelling Bee is a game where you are given seven letters and you make as many words as you can. There is a Hints option which tells you the total number of words that begin with each letter. At some point I usually make a list of how many words are left and their lengths. But that gets tedious.
 
-Using the already entered words (words.txt), the number of possible words (list.txt), and the word length data (edited at top of the script), bee.pl will provide you with the number of words left. I use online image-to-text apps to get the data out of my screenshots.
+Using the already entered words (words.txt), the number of possible words (list.txt), and the word length data (edited at top of the script), bee.pl will provide you with the number of words left. I use image-to-text software to get the data out of my screenshots.
 
 e.g. with the supplied data, the script produces concise output:
 
