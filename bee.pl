@@ -40,7 +40,7 @@ for my $word (@words) {
     push @{$leng{$lets}}, length $word;
 }
 
-my @let = uniq(map { substr $_, 0, 1; } (sort keys %freq));
+my @let = uniq(map { substr $_, 0, 1; } (sort keys %cap));
 
 my @out;
 my $current_letter;
