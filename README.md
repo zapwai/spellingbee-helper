@@ -13,3 +13,7 @@ Lo : 7
 Ra3 Ro2 : 5 6 7 7 8 
 Ta To : 5 7 
 </code>
+
+There is also a prep.pl script which can use tesseract to convert your screenshots into textfiles.
+
+Try the web app here: [zapwai.net/bee](https://zapwai.net/bee)

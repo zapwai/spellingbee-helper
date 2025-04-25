@@ -28,9 +28,21 @@ for my $line (@lines) {
 
 ## Put the words you have already entered into words.txt:
 open $fh, "<", "words.txt";
-my @words = <$fh>;
+my @prewords = <$fh>;
 close $fh;
-chomp @words;
+chomp @prewords;
+# Handling the double-word lines that come up when using ocr
+my @words;
+for my $word (@prewords) {
+    if ($word =~ /\w\s\w/) {
+	my ($w1, $w2) = split " ", $word;
+	push @words, $w1;
+	push @words, $w2;
+    } else {
+	push @words, $word;
+    }
+}
+
 my %freq;
 my %leng;
 for my $word (@words) {
