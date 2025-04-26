@@ -31,15 +31,28 @@ open $fh, "<", "words.txt";
 my @prewords = <$fh>;
 close $fh;
 chomp @prewords;
-# Handling the double-word lines that come up when using ocr
+# Handling the double-word lines that often come up when using ocr
+# Leading or trailing spaces cause problems.
 my @words;
-for my $word (@prewords) {
-    if ($word =~ /\w\s\w/) {
-	my ($w1, $w2) = split " ", $word;
-	push @words, $w1;
-	push @words, $w2;
+for my $w (@prewords) {
+    # remove trailing or leading spaces
+    my $clear;
+    do {
+	$clear = 0;
+	if ($w =~ /^\s+\w/) {
+	    $w = substr $w, 1;
+	    $clear++;
+	} elsif ($w =~ /\w\s+$/) {
+	    $w = substr $w, 0, -1;
+	    $clear++;
+	}
+    } while ($clear != 0);
+    # (Allow multiple words per line, separated by spaces)
+    if ($w =~ /\w\s\w/) {
+	my @lilwords = split " ", $w;
+	push @words, @lilwords;
     } else {
-	push @words, $word;
+	push @words, $w;
     }
 }
 

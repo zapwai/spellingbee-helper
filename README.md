@@ -1,7 +1,7 @@
 # spellingbee-helper
 Spelling Bee is a game where you are given seven letters and you make as many words as you can. There is a Hints option which tells you the total number of words that begin with each letter. At some point I usually make a list of how many words are left and their lengths. But that gets tedious.
 
-Using the already entered words (words.txt), the number of possible words (list.txt), and the word length data (edited at top of the script), bee.pl will provide you with the number of words left. I use image-to-text software to get the data out of my screenshots.
+Using your already entered words (words.txt), the number of possible words (list.txt), and the word length data (edited at top of the script), bee.pl will provide you with the number of words left. I use image-to-text software to get the data out of my screenshots.
 
 e.g. with the supplied data, the script produces concise output:
 
@@ -14,6 +14,6 @@ Ra3 Ro2 : 5 6 7 7 8
 Ta To : 5 7 
 </code>
 
-There is also a prep.pl script which can use tesseract to convert your screenshots into textfiles.
+I then added the prep.pl script which uses Tesseract to convert your screenshots into textfiles.
 
-Try the web app here: [zapwai.net/bee](https://zapwai.net/bee)
+Try the web version here: [zapwai.net/bee](https://zapwai.net/bee)
