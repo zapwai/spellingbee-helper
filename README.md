@@ -14,6 +14,7 @@ Ra3 Ro2 : 5 6 7 7 8
 Ta To : 5 7 
 </code>
 
-I then added the prep.pl script which uses Tesseract to convert your screenshots into textfiles.
+I then added the prep.pl script which uses Tesseract to convert your screenshots into textfiles.<br>
+Image::OCR::Tesseract requires `convert` (Imagemagick).
 
 Try the web version here: [zapwai.net/bee](https://zapwai.net/bee)
